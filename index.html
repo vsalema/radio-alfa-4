@@ -67,8 +67,8 @@ body {
 	background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 29%, rgba(165, 165, 165, 1) 100%);
 	background: radial-gradient(ellipse at center, rgb(255, 255, 255) 29%, rgb(36, 35, 35) 100%);
 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a5a5a5', GradientType=1);
-	border: 7px solid #adadad;
-	border-radius: 40% 40% 0 0;
+	border: 10px solid #adadad;
+  border-radius: 44% 44% 0 0;
 	box-shadow: inset 22px 22px 30px -20px rgba(0, 0, 0, 0.8);
 	display: -webkit-box;
 	display: -moz-box;
@@ -481,9 +481,9 @@ color: red;
   overflow: hidden;
   opacity: 0.8;
   z-index: -1;
-  height: 223px;
-  width: 746px;
-  margin-left: -49px;
+  height: 228px;
+  width: 496px;
+  margin-left: -50px;
   margin-top: 13px;
   display: flex;
   max-width: 60%;
@@ -492,19 +492,22 @@ color: red;
   @import url( 
 'https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
    video {
-  border-radius: 40% 40% 0 0;
+  border-radius: 45% 45% 0 0;
   overflow: hidden;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  height: 212px;
+  height: 256px;
   position: absolute;
-  width: 400px;
+  width: 487px;
   z-index: -1;
-top: 152px;
+  top: 135px;
+  max-width: 647px;
+  left: 524px;
 }
+
   </style>
 </head>
 <body>
@@ -933,8 +936,8 @@ const audioMotion11 = new AudioMotionAnalyzer(
 document.getElementById("visualizer"),
 {
   source: audioElements[0],
-  height: 200,
-  width: 500,
+  height: 80,
+  width: 400,
   ansiBands: false,
   showScaleX: false,
   bgAlpha: 0,
@@ -943,10 +946,12 @@ document.getElementById("visualizer"),
   frequencyScale: "log",
   showPeaks: false,
   smoothing: 0.7,
-  gradient: "prism",
+  gradient: "classic",
   ledBars: true,
   showPeaks: true,
   mirror: 1 });
+
+
 //# sourceURL=pen.js
     </script>
 </body>

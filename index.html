@@ -153,15 +153,18 @@ body {
   max-width: 100%;
 }
 .radio-play-btn {
-	color: #b52103;
-	left: 0;
-	margin-top: 65px;
-	position: absolute;
-	font-size: 50px;
-	width: 100%;
+  color: #b52103;
+  left: 0;
+  margin-top: 25px;
+  position: absolute;
+  font-size: 50px;
+  width: 100%;
 }
 .radio-play-btn i {
-	cursor: pointer;
+  cursor: pointer;
+  margin-top: 50px;
+  position: absolute;
+  margin-left: -21px;
 }
 .fa, .fa::before, .fa::after {
     -webkit-box-sizing: unset;
@@ -169,7 +172,7 @@ body {
     box-sizing: unset;
 }
 .radio-play-btn .fa-play {
-	margin-left: 7px;
+	margin-left: -14px;
 }
 /* Tuner */
 .radio-tuner {
@@ -472,22 +475,42 @@ color: red;
 
 }
  .visualizer {
-   border-radius: 1.5rem;
-  position: fixed;
+  padding: 1.3rem;
+  border-radius: 1.5rem;
+  position: absolute;
+  overflow: hidden;
   opacity: 0.8;
-  z-index: 2;
-  height: 348px;
-  width: 559px;
-  max-width: 45%;
+  z-index: -1;
+  height: 228px;
+  width: 496px;
+  margin-left: -50px;
+  margin-top: 13px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  left: auto;
-  margin-left: -4.5%;
-  top: 67px;
-  
+  max-width: 60%;
+  text-align: center;
 }
-  .playy {
+  @import url( 
+'https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+   video {
+  border-radius: 45% 45% 0 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 256px;
+  position: absolute;
+  width: 487px;
+  z-index: -1;
+  top: 135px;
+  max-width: 647px;
+  left: 473px;
+}
+
+  
+  
+ .playy {
   position: relative;
   height: 230px;
   margin: 0 auto;
@@ -521,7 +544,6 @@ color: red;
     <div class="radio-screen">
       
       <div class="radio-slide-logo clip">
-        
         
         
         <div class="container"></div> 
@@ -932,7 +954,7 @@ const audioMotion11 = new AudioMotionAnalyzer(
 document.getElementById("visualizer"),
 {
   source: audioElements[0],
-  height: 60,
+  height: 80,
   width: 400,
   ansiBands: false,
   showScaleX: false,

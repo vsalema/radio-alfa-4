@@ -489,7 +489,7 @@ color: red;
 }
   @import url( 
 'https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
-   video {
+  video {
   border-radius: 45% 45% 0 0;
   overflow: hidden;
   display: -webkit-box;
@@ -497,16 +497,28 @@ color: red;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  height: 256px;
+  height: 171px;
   position: absolute;
-  width: 487px;
-  z-index: -1;
-  top: 135px;
+  width: 409px;
+  top: 133px;
   max-width: 647px;
-  left: 473px;
-}
+  left: 366px;
+  margin-left: 53px;
+  z-index: 2;
+visibility: hidden;
+  }
 
-  
+  canvas {
+  border-radius: 41% 41% 0 0;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  width: 454px;
+  max-width: 452px;
+  max-block-size: 464px;
+  top: 5px;
+  left: 18px;
+}
   
  .playy {
   position: relative;
@@ -525,13 +537,13 @@ color: red;
   margin-top: -40px;
 }
   
-  
+ 
   </style>
 </head>
 <body>
   <body class="home">
   
-    
+    <video hidden autoplay loop controls id="video" src="https://static.videezy.com/system/resources/previews/000/051/226/original/24686_Abstract-musical-note-background_HD_BG.mp4"></video>
     
     <div class="radio-slider">
   
@@ -542,14 +554,22 @@ color: red;
     <div class="radio-screen">
       
       <div class="radio-slide-logo clip">
+       
         
+        <div class="container">
+          
+          
+        </div> 
+         
         
-        <div class="container"></div> 
-        
-        <div class="visualizer" id="visualizer"></div>
-   
+   <div class="canv visualizer" id="visualizer">
+          <div>
+               <canvas class="canvas" id="canvas"></canvas></div>
+          
+        </div>
         
         <div class="slide-wrap">
+          
           <ul>
 <li class="slide-one active" data-audio-src="https://n16a-eu.rcs.revma.com/amrbkhqtkm0uv?rj-ttl=5&rj-tok=AAABjyZZV10A8pNBeIWHkkzM-w" data-title="Radio Alfa" data-description="A Rádio Alfa é uma estação de rádio parisiense, dirigida à comunidade lusófona de França. Foi lançada a 5 de outubro de 1987 pela Associação Luso-Francesa do Audiovisual. A sede e os estúdios localizam-se em Créteil, no sudeste de Paris."
               data-link="#1">
@@ -952,7 +972,7 @@ const audioMotion11 = new AudioMotionAnalyzer(
 document.getElementById("visualizer"),
 {
   source: audioElements[0],
-  height: 80,
+  height: 200,
   width: 400,
   ansiBands: false,
   showScaleX: false,
@@ -970,5 +990,24 @@ document.getElementById("visualizer"),
 
 //# sourceURL=pen.js
     </script>
-</body>
+
+  <script>
+  
+  // This will copy the contents of video element to a canvas element
+
+let canvasEl = document.getElementById('canvas');
+let context = canvasEl.getContext('2d');
+let videoEl = document.getElementById('video');
+
+function updateCanvas() {
+  context.drawImage(videoEl, 0, 0, canvasEl.width, canvasEl.height);
+  
+  window.requestAnimationFrame(updateCanvas);
+}
+
+requestAnimationFrame(updateCanvas);
+  </script>
+  
+  
+  </body>
 </html>

@@ -69,7 +69,12 @@ body {
 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a5a5a5', GradientType=1);
 	border: 12px solid #adadad;
   border-radius: 44% 44% 0 0;
-	box-shadow: inset 22px 22px 30px -20px rgba(0, 0, 0, 0.8);
+	background-image: radial-gradient(rgba(250, 244, 244, 0.05), rgba(12, 12, 12, 0.5)), url("https://i.ibb.co/XLzDmBg/24686-Abstract-musical-note-background-HD-BG-ezgif-com-video-to-gif-converter.gif");
+  background-size: 600px 300px;
+  background-repeat: no-repeat;
+  
+  
+  box-shadow: inset 22px 22px 30px -20px rgba(0, 0, 0, 0.8);
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -543,7 +548,7 @@ visibility: hidden;
 <body>
   <body class="home">
   
-    <video hidden autoplay loop controls id="video" src="https://static.videezy.com/system/resources/previews/000/051/226/original/24686_Abstract-musical-note-background_HD_BG.mp4"></video>
+    
     
     <div class="radio-slider">
   
@@ -562,11 +567,7 @@ visibility: hidden;
         </div> 
          
         
-   <div class="canv visualizer" id="visualizer">
-          <div>
-               <canvas class="canvas" id="canvas"></canvas></div>
-          
-        </div>
+   <div class="canv visualizer" id="visualizer"></div>
         
         <div class="slide-wrap">
           
@@ -991,22 +992,7 @@ document.getElementById("visualizer"),
 //# sourceURL=pen.js
     </script>
 
-  <script>
   
-  // This will copy the contents of video element to a canvas element
-
-let canvasEl = document.getElementById('canvas');
-let context = canvasEl.getContext('2d');
-let videoEl = document.getElementById('video');
-
-function updateCanvas() {
-  context.drawImage(videoEl, 0, 0, canvasEl.width, canvasEl.height);
-  
-  window.requestAnimationFrame(updateCanvas);
-}
-
-requestAnimationFrame(updateCanvas);
-  </script>
   
   
   </body>

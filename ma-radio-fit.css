@@ -1,0 +1,26 @@
+
+/* =====================================================
+   Fit-to-iframe kit (structure intact, no child overrides)
+   - Scales the whole page as a single surface.
+   - Avoids touching inline styles of inner components.
+   ===================================================== */
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+/* Optional centering to keep the page framed inside any overlay */
+body.overlay-fit{
+  display: grid;
+  place-items: center;
+  overflow: hidden; /* clip overflow inside the iframe */
+}
+
+/* The chosen root is scaled uniformly; no descendant rules here */
+.overlay-fit-target{
+  transform: var(--page-transform, none);
+  transform-origin: top center; /* keep top aligned to avoid vertical drift */
+  will-change: transform;
+  /* Ensure the element is treated as a box while scaling */
+  display: inline-block;
+}

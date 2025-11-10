@@ -14,6 +14,8 @@ body.overlay-fit{
   display: grid;
   place-items: center;
   overflow: hidden; /* clip overflow inside the iframe */
+  background: linear-gradient(to bottom, rgba(93, 188, 218, 1) 0%, rgba(72, 140, 169, 1) 100%);
+    background-repeat: repeat;
 }
 
 /* The chosen root is scaled uniformly; no descendant rules here */
